@@ -2,11 +2,11 @@
   "name": "semester-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node production/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && node ./production/server.js",
+    "test": "npm run build && jest --testPathPattern=./production"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,10 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "@types/node": "^17.0.23"
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.23",
+    "@types/supertest": "^2.0.12",
+    "jest": "^28.0.2",
+    "supertest": "^6.2.3"
   }
 }
