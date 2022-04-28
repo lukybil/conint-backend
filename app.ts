@@ -1,7 +1,6 @@
 import express from "express"
 import { InMemoryDB } from "./data/InMemoryDB"
 const app = express()
-const port = 10001
 
 type CardProps = {
   card: {id: string
@@ -23,6 +22,4 @@ app.get('/', (req, res) => {
   res.send('hi')
 })
 
-app.listen(port, /*process.env.HOST || 'localhost',*/ () => {
-  console.log(`Example app listening on port ${port}`)
-})
+export default app;
