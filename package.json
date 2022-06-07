@@ -6,6 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node ./production/server.js",
+    "dockerize": "npm run build && docker build -t conint-backend:latest .",
+    "start docker": "docker run -p 10001:10001 conint-backend:latest",
     "test": "npm run build && jest --testPathPattern=./production"
   },
   "author": "",
